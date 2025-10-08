@@ -1,31 +1,31 @@
 import 'package:flutter/material.dart';
 
 const colorList = <Color>[
-  Colors.indigoAccent,
-  Colors.tealAccent,
+  Colors.red,
+  Colors.purple,
+  Colors.blue,
+  Colors.green,
   Colors.yellow,
-  Colors.teal,
-  Colors.purpleAccent,
-  Colors.redAccent,
+  Colors.orange,
+  Colors.deepOrange,
   Colors.pinkAccent,
-  Colors.lightGreenAccent,
-  Colors.lightBlue,
-  Colors.amberAccent,
+  Colors.pink,
+  Colors.grey
 ];
+
 
 class AppTheme {
   final int selectedColor;
+  
+  AppTheme({ this.selectedColor = 0})
+  : assert( selectedColor>=0, 
+  'La posicion del color seleccionado debe ser mayor a 0'),
+  assert(selectedColor < colorList.length, 
+  'La posicion del color seleccionado no debe ser superior al tamaño de la lista');
 
-  AppTheme({this.selectedColor = 0})
-    : assert(
-        selectedColor >= 0,
-        'La posición  del color seleccionado debe ser mayor a 0',
-      ),
-      assert(
-        selectedColor < colorList.length,
-        'La posición del color seleccionado no debe ser superior al tamaño de la lisrta',
-      );
-
-  ThemeData getTheme() =>
-      ThemeData(useMaterial3: true, colorSchemeSeed: colorList[selectedColor]);
+  ThemeData getTheme()=> ThemeData(
+    useMaterial3: true,
+    colorSchemeSeed: colorList[selectedColor]
+  );
 }
+

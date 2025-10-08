@@ -1,5 +1,4 @@
 import 'package:widget_app_220262/domain/entities/video_post.dart';
-import 'package:widget_app_220262/shared/data/local_video_post.dart';
 
 class LocalVideoModel {
   final String name;
