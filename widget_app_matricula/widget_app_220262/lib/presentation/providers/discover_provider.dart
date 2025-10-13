@@ -9,8 +9,8 @@ class DiscoverProvider extends ChangeNotifier { // Nos permite cambiar el estado
 
   DiscoverProvider(){
     loadNextPage();
-  }
-
+  } 
+ 
   Future<void> loadNextPage() async {
     await Future.delayed(const Duration(seconds: 2));
 
